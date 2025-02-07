@@ -107,16 +107,15 @@ def listar_restaurante():
     """Escreve uma lista de todos os restaurantes registrados, sua categoria e estado de ativação."""
     nova_pagina('Listando os restaurantes')
 
+    cabecalho = '{} {} {}'.format("Nome".ljust(21), "Categoria".ljust(20), "Status")
+    print(cabecalho)
+    linha(cabecalho)
     for r in restaurantes:
         nome_restaurante = r['nome']
         categoria = r['categoria']
         ativacao = 'Ativado' if r['ativo'] else 'Desativado'
-        
-        cabecalho = '.{} {} {}'.format("Nome".ljust(20), "Categoria".ljust(20), "Status")
-        print(cabecalho)
-        linha(cabecalho)
-        
         print('.{} {} {}'.format(nome_restaurante.ljust(20), categoria.ljust(20), ativacao))
+    
     voltar_tela_principal()
 
 def toggle_restaurante():
