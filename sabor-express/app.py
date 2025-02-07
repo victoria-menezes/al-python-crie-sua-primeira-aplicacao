@@ -90,7 +90,10 @@ def opcao_invalida():
 
 ## Funcoes restaurante
 def cadastrar_restaurante():
-    """Cadastro de um novo registro na lista de restaurantes."""
+    """Cadastro de um novo registro na lista de restaurantes.
+
+    Recebe o nome e categoria, e adiciona um novo restaurante desativado à lista.
+    """
     nova_pagina('Cadastro de novos restaurantes')
     
     nome_restaurante = input('O nome do restaurante: ')
@@ -119,7 +122,9 @@ def listar_restaurante():
     voltar_tela_principal()
 
 def toggle_restaurante():
-    """Deixa um restaurante ativo inativo, e vice-versa."""
+    """Deixa um restaurante ativo inativo, e vice-versa.
+    
+    Recebe o nome de um restaurante, e 'flipa' seu estado de ativação."""
     nova_pagina("Atualizar restaurantes")
     nome_restaurante = input('Digite o nome do restaurante que deve ser atualizado: ')
     
